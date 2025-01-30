@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Image Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .square-container {
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(3, 150px);
+            gap: 10px;
+            transform: rotate(45deg);
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .square img:hover {
+            transform: rotate(-45deg) scale(1.1);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square-container">
+        <div class="square"><img src="https://thumbs.dreamstime.com/b/flowers-wallpapers-hd-wallpaper-cave-flowers-wallpapers-hd-wallpaper-cave-324019003.jpg" alt="Image 1"></div>
+
+        <div class="square"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEEVDzKwQOaWMmChCYwauuONSkEjj6gyK7Eg&s" alt="Image 2"></div>
+
+        <div class="square"><img src="https://w0.peakpx.com/wallpaper/430/712/HD-wallpaper-different-birds-birds-beauty-flowers-nature.jpg" alt="Image 3"></div>
+
+        <div class="square"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXa-Cc3DouVXhN8lkzJYjcYKHAwYmhPqYAQA&s" alt="Image 4"></div>
+
+        <div class="square"><img src="https://thumbs.dreamstime.com/b/pink-lotus-flower-reflection-pond-best-hd-wallpaper-pink-lotus-flower-reflection-pond-best-hd-wallpaper-189853480.jpg" alt="Image 5"></div>
+
+        <div class="square"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC9QI-rC14Lg_NC-MqwKHUMz3YMWvtPbVlCg&s" alt="Image 6"></div>
+        
+        <div class="square"><img src="https://t3.ftcdn.net/jpg/08/00/68/98/360_F_800689824_Z4oDFNUOEUwBZXDcKvaHBjZPSu2tMW1g.jpg" alt="Image 7"></div>
+    </div>
+
+</body>
+</html>
